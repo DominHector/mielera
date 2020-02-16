@@ -1,4 +1,4 @@
-{function name="headboard" saludo=""}
+{function name="headboard" title=""}
     <div class="com-headboard">
         <div class="title">
            <h1>{$title}</h1>
