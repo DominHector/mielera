@@ -1,5 +1,5 @@
-{function name="headboard" title=""}
-    <div class="com-headboard">
+{function name="headboard" title="" attachment="fixed"}
+    <div class="com-headboard" style="background-attachment:{$attachment};">
         <div class="title">
            <h1>{$title}</h1>
         </div>

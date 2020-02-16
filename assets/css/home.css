@@ -343,9 +343,7 @@ template {
   background-image: url(../../assets/img/componentes/com-headboard/backgraund-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
-  vertical-align: center;
   text-align: center;
 }
 .com-headboard .title {
