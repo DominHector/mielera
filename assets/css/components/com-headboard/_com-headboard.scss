@@ -1,0 +1,20 @@
+.com-headboard {
+  height: 400px;
+  width: 100%;
+  background-image: url(../../assets/img/componentes/com-headboard/backgraund-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  vertical-align: center;
+  text-align: center;
+  .title {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    h1 {
+      width: 100%;
+    }
+  }
+}
