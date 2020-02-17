@@ -1,7 +1,7 @@
 @import "normalize";
 @import "core";
-@import "../../components/com-headboard/css/com-headboard";
-@import "../../components/com-card/css/com-card";
+@import "../../../application/views/components/com-headboard/css/com-headboard";
+@import "../../../application/views/components/com-card/css/com-card";
 
 .section {
   min-height: 400px;
