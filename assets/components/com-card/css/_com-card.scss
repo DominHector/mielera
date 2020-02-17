@@ -1,0 +1,11 @@
+.com-card {
+  img {
+    width: 100%;
+  }
+  .card-body {
+    .card-title { }
+    .card-text {
+      @include truncate(1em, 1.4, 3);
+    }
+  }
+}
