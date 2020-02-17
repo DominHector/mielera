@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 
         $this->smarty->assign('PRODUCTS', $products_data);
         $this->smarty->assign('title', 'title');
-        $this->smarty->display('headers.tpl');
+        $this->smarty->display('head.tpl');
         $this->smarty->display('pages/home.tpl');
     }
 }
