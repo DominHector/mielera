@@ -3,26 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
         $this->load->helper('url');
+
+        $this->load->model('Products_model');
+        $products_data = $this->Products_model->get_products_data();
+
+        $this->smarty->assign('PRODUCTS', $products_data);
+        $this->smarty->assign('title', 'title');
         $this->smarty->display('headers.tpl');
-        $this->smarty->assign('title', "title");
-        $this->smarty->display('home.tpl');
+        $this->smarty->display('pages/home.tpl');
     }
 }
