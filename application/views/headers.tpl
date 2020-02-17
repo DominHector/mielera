@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/pages/css/home.css">
-    <link rel="stylesheet" type="text/css" href="{{base_url()}}application/pages/test.css">
     <!-- Bootstrap & JQuery-->
     <link rel="stylesheet" type="text/css" href="{{base_url()}}bootstrap/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

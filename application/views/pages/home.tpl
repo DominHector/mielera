@@ -1,5 +1,5 @@
-{{include file="components/com-headboard.tpl" title="Main Page"}}
-{{include file="components/com-card.tpl" title="Main Page"}}
+{{include file="components/com-headboard/com-headboard.tpl" title="Main Page"}}
+{{include file="components/com-card/com-card.tpl" title="Main Page"}}
 <body>
     <div class="section-head">
         {{call name="com_headboard" title="$title" attachment="fixed"}}
