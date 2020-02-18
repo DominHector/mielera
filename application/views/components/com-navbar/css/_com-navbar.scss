@@ -1,0 +1,12 @@
+.com-navbar {
+  nav {
+    position: fixed;
+    transition: all 0.3s;
+  }
+  &:not(.opaced) {
+    nav {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+}

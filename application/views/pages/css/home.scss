@@ -1,18 +1,18 @@
 @import "normalize";
 @import "core";
-@import "../../../application/views/components/com-headboard/css/com-headboard";
-@import "../../../application/views/components/com-card/css/com-card";
+@import "../../components/com-navbar/css/com-navbar";
+@import "../../components/com-headboard/css/com-headboard";
+@import "../../components/com-card/css/com-card";
 
 .section {
   min-height: 400px;
 }
 .section-head {
   width: 100%;
-  height: 400px;
 }
 .section-2 { }
 .section-3 {
-  background-image: url("../../../assets/img/sections/background.svg");
+  background-image: url("../../../../assets/img/sections/background.svg");
   background-color: white;
   background-repeat: repeat;
   background-size: 50px;

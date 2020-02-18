@@ -5,11 +5,9 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->helper('url');
-
+        $this->output->delete_cache();
         $this->load->model('Products_model');
         $products_data = $this->Products_model->get_products_data();
-
         $this->smarty->assign('PRODUCTS', $products_data);
         $this->smarty->assign('title', 'title');
         $this->smarty->display('head.tpl');
