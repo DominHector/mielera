@@ -1,9 +1,5 @@
-class ComCard extends HTMLElement {
-    constructor() {
-        super();
-    }
+$( document ).ready(function() {
+    const card = new Honey('com-card');
 
-    connectedCallback() {
-        console.log(this);
-    }
-}
+
+});

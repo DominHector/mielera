@@ -1,11 +1,23 @@
 .com-card {
-  img {
-    width: 100%;
-  }
-  .card-body {
-    .card-title { }
-    .card-text {
-      @include truncate(1em, 1.4, 3);
+  .card {
+    .card-body {
+      .card-title { }
+      .card-text {
+        @include truncate(1em, 1.4, 3);
+      }
+      .btn-price {
+        .material-icons {
+          margin-left: 3px;
+        }
+      }
+    }
+    &.horizontal {
+      @include media(md) {
+        flex-direction: row !important;
+        img {
+          width: 25% !important;
+        }
+      }
     }
   }
 }
