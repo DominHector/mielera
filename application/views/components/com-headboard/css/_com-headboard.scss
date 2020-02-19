@@ -5,14 +5,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: center;
-  .title {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    height: 100%;
-    h1 {
-      width: 100%;
+  display: flex;
+  .content {
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    img {
+      width: 60%;
     }
+    .title { }
   }
 }

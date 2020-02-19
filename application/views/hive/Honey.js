@@ -8,11 +8,11 @@ class Honey {
         this.com.height(window.innerHeight);
     }
 
-    manage_opacity_by_scroll (position = 0) {
+    manage_fading_by_scroll (position = 0) {
         if($(window).scrollTop() <= position) {
-            this.com.removeClass('opaced');
+            this.com.addClass('fading');
         }else{
-            this.com.addClass('opaced');
+            this.com.removeClass('fading');
         }
     }
 

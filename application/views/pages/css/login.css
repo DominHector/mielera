@@ -349,7 +349,7 @@ template {
   background-color: #ef9a9a;
 }
 
-.red .lighten-2 {
+.red .lighten-2, .red .form-login form input, .form-login form .red input {
   background-color: #e57373;
 }
 
@@ -405,7 +405,7 @@ template {
   background-color: #f48fb1;
 }
 
-.pink .lighten-2 {
+.pink .lighten-2, .pink .form-login form input, .form-login form .pink input {
   background-color: #f06292;
 }
 
@@ -461,7 +461,7 @@ template {
   background-color: #ce93d8;
 }
 
-.purple .lighten-2 {
+.purple .lighten-2, .purple .form-login form input, .form-login form .purple input {
   background-color: #ba68c8;
 }
 
@@ -517,7 +517,7 @@ template {
   background-color: #b39ddb;
 }
 
-.deep-purple .lighten-2 {
+.deep-purple .lighten-2, .deep-purple .form-login form input, .form-login form .deep-purple input {
   background-color: #9575cd;
 }
 
@@ -573,7 +573,7 @@ template {
   background-color: #9fa8da;
 }
 
-.indigo .lighten-2 {
+.indigo .lighten-2, .indigo .form-login form input, .form-login form .indigo input {
   background-color: #7986cb;
 }
 
@@ -629,7 +629,7 @@ template {
   background-color: #90caf9;
 }
 
-.blue .lighten-2 {
+.blue .lighten-2, .blue .form-login form input, .form-login form .blue input {
   background-color: #64b5f6;
 }
 
@@ -685,7 +685,7 @@ template {
   background-color: #81d4fa;
 }
 
-.light-blue .lighten-2 {
+.light-blue .lighten-2, .light-blue .form-login form input, .form-login form .light-blue input {
   background-color: #4fc3f7;
 }
 
@@ -741,7 +741,7 @@ template {
   background-color: #80deea;
 }
 
-.cyan .lighten-2 {
+.cyan .lighten-2, .cyan .form-login form input, .form-login form .cyan input {
   background-color: #4dd0e1;
 }
 
@@ -797,7 +797,7 @@ template {
   background-color: #80cbc4;
 }
 
-.teal .lighten-2 {
+.teal .lighten-2, .teal .form-login form input, .form-login form .teal input {
   background-color: #4db6ac;
 }
 
@@ -853,7 +853,7 @@ template {
   background-color: #a5d6a7;
 }
 
-.green .lighten-2 {
+.green .lighten-2, .green .form-login form input, .form-login form .green input {
   background-color: #81c784;
 }
 
@@ -909,7 +909,7 @@ template {
   background-color: #c5e1a5;
 }
 
-.light-green .lighten-2 {
+.light-green .lighten-2, .light-green .form-login form input, .form-login form .light-green input {
   background-color: #aed581;
 }
 
@@ -965,7 +965,7 @@ template {
   background-color: #e6ee9c;
 }
 
-.lime .lighten-2 {
+.lime .lighten-2, .lime .form-login form input, .form-login form .lime input {
   background-color: #dce775;
 }
 
@@ -1009,59 +1009,59 @@ template {
   background-color: #aeea00;
 }
 
-.yellow .lighten-5 {
+.yellow .lighten-5, .form-login form input .lighten-5 {
   background-color: #fffde7;
 }
 
-.yellow .lighten-4 {
+.yellow .lighten-4, .form-login form input .lighten-4 {
   background-color: #fff9c4;
 }
 
-.yellow .lighten-3 {
+.yellow .lighten-3, .form-login form input .lighten-3 {
   background-color: #fff59d;
 }
 
-.yellow .lighten-2 {
+.yellow .lighten-2, .yellow .form-login form input, .form-login form .yellow input, .form-login form input .lighten-2, .form-login form input input {
   background-color: #fff176;
 }
 
-.yellow .lighten-1 {
+.yellow .lighten-1, .form-login form input .lighten-1 {
   background-color: #ffee58;
 }
 
-.yellow {
+.yellow, .form-login form input {
   background-color: #ffeb3b;
 }
 
-.yellow .darken-1 {
+.yellow .darken-1, .form-login form input .darken-1 {
   background-color: #fdd835;
 }
 
-.yellow .darken-2 {
+.yellow .darken-2, .form-login form input .darken-2 {
   background-color: #fbc02d;
 }
 
-.yellow .darken-3 {
+.yellow .darken-3, .form-login form input .darken-3 {
   background-color: #f9a825;
 }
 
-.yellow .darken-4 {
+.yellow .darken-4, .form-login form input .darken-4 {
   background-color: #f57f17;
 }
 
-.yellow .accent-1 {
+.yellow .accent-1, .form-login form input .accent-1 {
   background-color: #ffff8d;
 }
 
-.yellow .accent-2 {
+.yellow .accent-2, .form-login form input .accent-2 {
   background-color: #ffff00;
 }
 
-.yellow .accent-3 {
+.yellow .accent-3, .form-login form input .accent-3 {
   background-color: #ffea00;
 }
 
-.yellow .accent-4 {
+.yellow .accent-4, .form-login form input .accent-4 {
   background-color: #ffd600;
 }
 
@@ -1077,7 +1077,7 @@ template {
   background-color: #ffe082;
 }
 
-.amber .lighten-2 {
+.amber .lighten-2, .amber .form-login form input, .form-login form .amber input {
   background-color: #ffd54f;
 }
 
@@ -1133,7 +1133,7 @@ template {
   background-color: #ffcc80;
 }
 
-.orange .lighten-2 {
+.orange .lighten-2, .orange .form-login form input, .form-login form .orange input {
   background-color: #ffb74d;
 }
 
@@ -1189,7 +1189,7 @@ template {
   background-color: #ffab91;
 }
 
-.deep-orange .lighten-2 {
+.deep-orange .lighten-2, .deep-orange .form-login form input, .form-login form .deep-orange input {
   background-color: #ff8a65;
 }
 
@@ -1245,7 +1245,7 @@ template {
   background-color: #bcaaa4;
 }
 
-.brown .lighten-2 {
+.brown .lighten-2, .brown .form-login form input, .form-login form .brown input {
   background-color: #a1887f;
 }
 
@@ -1285,7 +1285,7 @@ template {
   background-color: #eeeeee;
 }
 
-.grey .lighten-2 {
+.grey .lighten-2, .grey .form-login form input, .form-login form .grey input {
   background-color: #e0e0e0;
 }
 
@@ -1325,7 +1325,7 @@ template {
   background-color: #b0bec5;
 }
 
-.blue-grey .lighten-2 {
+.blue-grey .lighten-2, .blue-grey .form-login form input, .form-login form .blue-grey input {
   background-color: #90a4ae;
 }
 
@@ -2422,62 +2422,12 @@ template {
   text-shadow: 0 0 40px black;
 }
 
-.com-headboard {
-  height: 500px;
-  width: 100%;
-  background-image: url(../../../../assets/img/components/com-headboard/background-img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
+.form-login {
+  margin: 180px auto;
+  width: 50%;
 }
-.com-headboard .content {
-  width: 250px;
-  margin: auto;
-  text-align: center;
-}
-.com-headboard .content img {
-  width: 60%;
-}
-.com-card .card .card-body .card-text {
-  display: block;
-  display: -webkit-box;
-  max-width: 400px;
-  height: 4.2em;
-  font-size: 1em;
-  line-height: 1.4;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.com-card .card .card-body .btn-price .material-icons {
-  margin-left: 3px;
-}
-@media (min-width: 1023px) {
-  .com-card .card.horizontal {
-    flex-direction: row !important;
-  }
-  .com-card .card.horizontal img {
-    width: 25% !important;
-  }
+.form-login form input {
+  padding-left: 8px !important;
 }
 
-.section {
-  min-height: 400px;
-}
-
-.section-head {
-  width: 100%;
-}
-
-.section-3 {
-  background-image: url("../../../../assets/img/sections/background.svg");
-  background-color: white;
-  background-repeat: repeat;
-  background-size: 50px;
-  width: 100%;
-  height: auto;
-}
-
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=login.css.map */

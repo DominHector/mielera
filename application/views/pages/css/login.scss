@@ -1,0 +1,14 @@
+@import "normalize";
+@import "core";
+@import "../../components/com-navbar/css/com-navbar";
+
+.form-login {
+  margin: 180px auto;
+  width: 50%;
+  form {
+    input {
+      padding-left: 8px !important;
+      @extend .yellow, .lighten-2;
+    }
+  }
+}

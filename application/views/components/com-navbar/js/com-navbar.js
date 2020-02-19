@@ -1,8 +1,12 @@
 $( document ).ready(function() {
-    const navbar = new Honey('com-navbar');
+    const com_navbar = new Honey('com-navbar');
 
-    $(window).scroll(function() {
-        navbar.manage_opacity_by_scroll(400);
-    });
+    if(!com_navbar.com.hasClass('not-fading')){
+        $(window).scroll(function() {
+            com_navbar.manage_fading_by_scroll(400);
+        });
+    }
+
+    $(".dropdown-trigger").dropdown();
 
 });
