@@ -1,15 +1,29 @@
-{{function name="com_navbar" opacity=true}}
-            <div class="com-navbar {{if $opacity}}opaced{{/if}}">
-                <nav class="yellow darken-2">
-                    <div class="nav-wrapper">
-                        <!-- <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a> -->
-                        <ul class="right hide-on-med-and-down">
-                            <!-- <li><a href="sass.html"><i class="material-icons">search</i></a></li> -->
-                            <!-- <li><a href="badges.html"><i class="material-icons">view_module</i></a></li> -->
-                            <!-- <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li> -->
-                            <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
-                        </ul>
-                    </div>
-                </nav>
+{{function name="com_navbar" options=false icons=false urls="#" brand_url="#" fading=false}}
+
+    <ul id="dropdown1" class="dropdown-content">
+        {{if $options}}
+            {{foreach $options as $option}}
+                <li><a href="{{base_url()}}{{$option['ml_option_url']}}">{{$option['ml_option_name']}} {{if $icons and $option['ml_option_icon']}}<i class="material-icons right">{{$option['ml_option_icon']}}</i>{{/if}}</a></li>
+            {{/foreach}}
+        {{/if}}
+    </ul>
+
+    <div class="com-navbar {{if $fading}}fading{{else}}not-fading{{/if}}">
+        <nav class="yellow darken-2">
+            <div class="nav-wrapper">
+                <a href="{{base_url()}}" class="brand-logo d-inline-flex left"> <img src="{{$brand_url}}"> mielera</a>
+                <ul class="right hide-on-med-and-down">
+                    {{if $options}}
+                        {{foreach $options as $option}}
+                            <li><a href="{{base_url()}}{{$option['ml_option_url']}}">{{$option['ml_option_name']}} {{if $icons and $option['ml_option_icon']}}<i class="material-icons right">{{$option['ml_option_icon']}}</i>{{/if}}</a></li>
+                        {{/foreach}}
+                    {{/if}}
+                </ul>
+                <ul class="right hide-on-large-only">
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right">menu</i></a></li>
+                </ul>
             </div>
+        </nav>
+    </div>
+
 {{/function}}

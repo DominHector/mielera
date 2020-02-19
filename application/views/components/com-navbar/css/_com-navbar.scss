@@ -1,12 +1,51 @@
 .com-navbar {
+  width: 100%;
+  z-index: 1;
   nav {
-    position: fixed;
     transition: all 0.3s;
+    .nav-wrapper {
+      .brand-logo img{
+        max-width: 45px;
+        margin: 0 8px;
+      }
+      ul {
+        li {
+          a{
+            font-size: 1.2em;
+            i {
+              margin: 0 4px !important;
+            }
+            &:hover {
+              background-color: transparent;
+              color: white;
+            }
+          }
+        }
+      }
+    }
   }
-  &:not(.opaced) {
+  &.fading {
     nav {
       background-color: transparent !important;
       box-shadow: none !important;
+      .brand-logo {
+        opacity: 0 !important;
+      }
+      ul li {
+        text-shadow: 0 0 40px black;
+      }
+    }
+  }
+  &:not(.not-fading) {
+    position: fixed;
+  }
+  .dropdown-content {
+    width: 140px !important;
+    li a {
+      @extend  .blue-grey-text, .text-darken-4;
+    }
+    .dropdown-trigger i {
+      text-shadow: 0 0 40px black;
     }
   }
 }

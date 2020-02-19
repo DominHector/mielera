@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    const card = new Honey('com-card');
+    const com_card = new Honey('com-card');
 
 
 });

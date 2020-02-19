@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/home.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/login.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{base_url()}}bootstrap/css/bootstrap.min.css">
