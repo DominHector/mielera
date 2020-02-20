@@ -5,7 +5,7 @@ class Honey {
     }
 
     adjust_height_like_window () {
-        this.com.height(window.innerHeight);
+        this.com.height($(window).innerHeight());
     }
 
     manage_fading_by_scroll (position = 0) {
@@ -15,5 +15,7 @@ class Honey {
             this.com.removeClass('fading');
         }
     }
+
+
 
 }

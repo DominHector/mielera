@@ -1,9 +1,40 @@
 .com-card {
   .card {
     .card-body {
-      .card-title { }
+      .card-title {
+        font-weight: 400;
+      }
       .card-text {
         @include truncate(1em, 1.4, 3);
+      }
+      .card-count {
+        display: flex;
+        input {
+          max-width: 32px;
+          height: 28px;
+          text-align: center;
+          margin: 0;
+          @include media(md) {
+            padding-left: 12px;
+          }
+          &:focus {
+            border-bottom: #fbc02d;
+          }
+        }
+        .arrow-count {
+          display: flex;
+          align-items: center;
+          width: 24px;
+          cursor: pointer;
+          &.up {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          &.down {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+        }
       }
       .btn-price {
         .material-icons {
@@ -15,8 +46,12 @@
       @include media(md) {
         flex-direction: row !important;
         img {
-          width: 25% !important;
+          width: 20% !important;
         }
+      }
+      .card-text {
+        @include truncate(1em, 1.4, 2);
+        max-width: 100%;
       }
     }
   }

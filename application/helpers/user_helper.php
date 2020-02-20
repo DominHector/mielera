@@ -3,14 +3,16 @@
 if (!function_exists('menu_session_options')){
     function menu_session_options(array $options) {
 
-        foreach($options as $option) {
-            if(!empty($_SESSION['user'])) {
-                if($option['ml_option_url'] !== 'login') {
-                    $result[] = $option;
-                }
-            } else {
-                if($option['ml_option_url'] !== 'unlogin') {
-                    $result[] = $option;
+        if(!empty($options)) {
+            foreach($options as $option) {
+                if(!empty($_SESSION['user'])) {
+                    if($option['ml_option_logged'] !== 'false') {
+                        $result[] = $option;
+                    }
+                } else {
+                    if($option['ml_option_logged'] !== 'true') {
+                        $result[] = $option;
+                    }
                 }
             }
         }
