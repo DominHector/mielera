@@ -10,7 +10,7 @@ class Pages_model extends CI_Model {
     public function get_menu_options() {
         $sql = 'SELECT * FROM ml_menu_options ORDER BY ml_option_id DESC';
         $query = $this->db->query($sql);
-        return $query->result_array() ? $query->result_array() : false;
+        return $query->result_array() ?? false;
     }
 
 }

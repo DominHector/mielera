@@ -10,7 +10,7 @@ class Products_model extends CI_Model {
     public function get_products_data() {
         $sql = 'SELECT * FROM ml_products';
         $query = $this->db->query($sql, []);
-        return $query->result_array() ? $query->result_array() : false;
+        return $query->result_array() ?? false;
     }
 
 }

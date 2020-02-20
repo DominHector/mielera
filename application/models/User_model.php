@@ -8,13 +8,12 @@ class User_model extends CI_Model {
     }
 
     public function get_user_login($user, $pass) {
-
         $sql = 'SELECT * FROM ml_users 
                 WHERE ml_user_name = ?
                 AND ml_user_pass = ?';
 
         $query = $this->db->query($sql, [$user, $pass]);
-        return $query->result_array() ? $query->result_array() : false;
+        return $query->result_array() ?? false;
     }
 
 }
