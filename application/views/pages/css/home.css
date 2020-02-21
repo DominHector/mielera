@@ -2520,6 +2520,20 @@ template {
   max-width: 100%;
 }
 
+.com-cart {
+  padding-top: 30px;
+}
+.com-cart .total-container .number-price {
+  display: flex;
+  align-items: center;
+}
+.com-cart .total-container .number-price .number {
+  font-size: 2.8rem;
+}
+.com-cart .total-container .number-price i {
+  margin-left: 5px;
+}
+
 .section {
   min-height: 400px;
 }

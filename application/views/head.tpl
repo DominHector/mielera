@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/home.css">
     <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/login.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/cart.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{base_url()}}bootstrap/css/bootstrap.min.css">
@@ -30,4 +31,5 @@
     <script src="{{base_url()}}application/views/components/com-navbar/js/com-navbar.js"></script>
     <script src="{{base_url()}}application/views/components/com-headboard/js/com-headboard.js"></script>
     <script src="{{base_url()}}application/views/components/com-card/js/com-card.js"></script>
+    <script src="{{base_url()}}application/views/components/com-cart/js/com-cart.js"></script>
 </head>
