@@ -1,9 +1,31 @@
 $( document ).ready(function() {
     const com_cart = new Honey('com-cart');
-    var cart_count = com_cart.com.find('.cart-count');
 
+    var total_price = com_cart.com.find('.total-price .number');
+    var com_card = com_cart.com.find('.com-card');
+    var product_form = com_cart.com.find('.product-form');
+    var arrow_count = com_card.find('.arrow-count');
 
+    arrow_count.on('click', function() {
+        var this_card = $(this).parents('.com-card');
+        var this_input_value = this_card.find('input').val();
+        total_price.html(sum_total());
+        add_product_in_form(this_input_value, this_card.data('productId'));
+    });
 
+    function sum_total () {
+        var total = 0;
+        com_card.each( function(index, value) {
+            var self = $(value);
+            var this_input = self.find('.input-count');
+            total += parseFloat(self.data('productPrice') * this_input.val());
+        });
 
+        return total.toFixed(2);
+    }
+
+    function add_product_in_form (quantity, card_product_id) {
+        product_form.find('.item-' + card_product_id).val(quantity);
+    }
 
 });

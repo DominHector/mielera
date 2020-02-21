@@ -2392,7 +2392,7 @@ template {
 
 .com-navbar {
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .com-navbar nav {
   transition: all 0.3s;
@@ -2423,6 +2423,9 @@ template {
   text-shadow: 0 0 40px black;
 }
 .com-navbar:not(.not-fading) {
+  position: fixed;
+}
+.com-navbar.not-fading {
   position: fixed;
 }
 .com-navbar .dropdown-content {
@@ -2518,6 +2521,47 @@ template {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
+
+.com-cart {
+  padding-top: 30px;
+}
+.com-cart .total-container {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  margin-top: 5px;
+  padding-top: 34px;
+  background: white;
+  border-bottom: 1px solid #e4e4e4;
+  z-index: 1;
+}
+@media (min-width: 1023px) {
+  .com-cart .total-container {
+    margin-top: 34px;
+  }
+}
+.com-cart .total-container .total-price {
+  font-size: 2.4rem;
+  display: flex;
+  align-items: baseline;
+}
+.com-cart .total-container .total-price .text-price {
+  margin-right: 6px;
+}
+.com-cart .total-container .total-price .number-price {
+  display: flex;
+  align-items: baseline;
+  font-size: 2rem;
+}
+.com-cart .total-container .total-price .number-price .number {
+  font-size: 2rem;
+}
+.com-cart .total-container .total-price .number-price i {
+  margin-left: 5px;
+}
+.com-cart .section-2 {
+  margin-top: 160px;
 }
 
 /*# sourceMappingURL=cart.css.map */

@@ -13,4 +13,26 @@ class Products_model extends CI_Model {
         return $query->result_array() ?? false;
     }
 
+    public function set_purchase_products_data($user, $product_id, $product_name, $product_price, $quantity, $sale, $img, $description) {
+        $data = array(
+            'ml_purchase_user' => $user,
+            'ml_purchase_product_id' => $product_id,
+            'ml_purchase_product_name' => $product_name,
+            'ml_purchase_product_price' => $product_price,
+            'ml_purchase_quantity' => $quantity,
+            'ml_purchase_date' => date("Y/m/d H:i:s"),
+            'ml_purchase_sale' => $sale,
+            'ml_purchase_img' => $img,
+            'ml_purchase_description' => $description
+        );
+        $query = $this->db->insert('ml_purchases', $data);
+        return $query ?? false;
+    }
+
+    public function get_purchase_products_data($user) {
+        $sql = 'SELECT * FROM ml_purchases WHERE ml_purchase_user = ?';
+        $query = $this->db->query($sql, [$user]);
+        return $query->result_array() ?? false;
+    }
+
 }
