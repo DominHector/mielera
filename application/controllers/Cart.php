@@ -17,6 +17,31 @@ class Cart extends CI_Controller {
         $products_data = $this->Products_model->get_products_data();
         $this->smarty->assign('PRODUCTS', $products_data);
 
+        if($this->session->userdata('user')){
+            if(isset($_POST)){
+                $sale_record = false;
+                foreach ($products_data as $product) {
+                    foreach($_POST as $key => $quantity) {
+                        if($product['ml_product_id'] == $key && $quantity > 0) {
+                            $user = $this->session->userdata('user');
+                            $product_id =  $product['ml_product_id'];
+                            $product_name = $product['ml_product_name'];
+                            $product_price = $product['ml_product_price'];
+                            $product_img = $product['ml_product_img'];
+                            $product_description = $product['ml_product_description'];
+                            $sale_record = $this->Products_model->set_purchase_products_data($user, $product_id, $product_name, $product_price, $quantity, 'selling', $product_img, $product_description);
+                            if($sale_record == false) {
+                                redirect('error-purchase');
+                            }
+                        }
+                    }
+                }
+                if($sale_record) {
+                    redirect('purchases');
+                }
+            }
+        }
+
         $this->smarty->display('pages/cart.tpl');
     }
 }

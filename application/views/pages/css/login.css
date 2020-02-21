@@ -2392,7 +2392,7 @@ template {
 
 .com-navbar {
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .com-navbar nav {
   transition: all 0.3s;
@@ -2423,6 +2423,9 @@ template {
   text-shadow: 0 0 40px black;
 }
 .com-navbar:not(.not-fading) {
+  position: fixed;
+}
+.com-navbar.not-fading {
   position: fixed;
 }
 .com-navbar .dropdown-content {

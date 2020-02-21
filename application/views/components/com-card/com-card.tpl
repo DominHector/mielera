@@ -10,7 +10,7 @@
                         {{if $counter}}
                         <div class="card-count">
                             <div class="arrow-count down yellow darken-2 noselect"><i class="material-icons left">keyboard_arrow_down</i></div>
-                            <input class="input-count yellow lighten-4" type="number" value="0" name="products" min="0" max="100">
+                            <input class="input-count yellow lighten-4" disabled type="number" value="0" name="products" min="0" max="100">
                             <div class="arrow-count up yellow darken-2 noselect"><i class="material-icons left">keyboard_arrow_up</i></div>
                         </div>
                         {{else}}

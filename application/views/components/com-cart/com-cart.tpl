@@ -6,8 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="total-price col-lg-12">
-                    <div class="text-price"></div>
-                    <div class="number-price"><span class="number"></span><i class="material-icons right">euro</i></a>
+                    <div class="text-price">Total:</div>
+                    <div class="number-price"><span class="number">0</span><i class="material-icons right">euro</i></a>
                     </div>
                 </div>
             </div>
@@ -23,13 +23,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div id="google-button" class="right"></div>
+                <form class="product-form" method="post">
+                    {{foreach $PRODUCTS as $item}}
+                        <input class="item-{{$item['ml_product_id']}}" type="hidden" name="{{$item['ml_product_id']}}" value="0">
+                    {{/foreach}}
+                    <button type="submit" class="btn btn-primary right">Submit</button>
+                </form>
             </div>
         </div>
     </div>
 
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="google-button" class="right"></div>
+            </div>
+        </div>
+    </div>
 
     <div id="contact" class="footer">
         {{call name="com_footer"}}
