@@ -2429,15 +2429,21 @@ template {
   position: fixed;
 }
 .com-navbar .dropdown-content {
-  width: 160px !important;
+  width: 180px !important;
 }
 .com-navbar .dropdown-content .dropdown-trigger i {
   text-shadow: 0 0 40px black;
+  float: left !important;
 }
 
 .form-login {
   margin: 180px auto;
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 1023px) {
+  .form-login {
+    width: 50%;
+  }
 }
 .form-login form input {
   padding-left: 8px !important;

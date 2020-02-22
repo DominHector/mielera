@@ -4,7 +4,10 @@
 
 .form-login {
   margin: 180px auto;
-  width: 50%;
+  width: 100%;
+  @include media(md) {
+    width: 50%;
+  }
   form {
     input {
       padding-left: 8px !important;

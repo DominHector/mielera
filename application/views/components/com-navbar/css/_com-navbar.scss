@@ -44,12 +44,13 @@
     position: fixed;
   }
   .dropdown-content {
-    width: 160px !important;
+    width: 180px !important;
     li a {
       @extend  .blue-grey-text, .text-darken-4;
     }
     .dropdown-trigger i {
       text-shadow: 0 0 40px black;
+      float: left !important;
     }
   }
 }

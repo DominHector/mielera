@@ -3,7 +3,7 @@
     <ul id="dropdown1" class="dropdown-content">
         {{if $options}}
             {{foreach $options as $option}}
-                <li><a href="{{base_url()}}{{$option['ml_option_url']}}">{{$option['ml_option_name']}} {{if $icons and $option['ml_option_icon']}}<i class="material-icons right">{{$option['ml_option_icon']}}</i>{{/if}}</a></li>
+                <li><a href="{{base_url()}}{{$option['ml_option_url']}}">{{$option['ml_option_name']}} {{if $icons and $option['ml_option_icon']}}<i class="material-icons left">{{$option['ml_option_icon']}}</i>{{/if}}</a></li>
             {{/foreach}}
         {{/if}}
     </ul>
@@ -15,7 +15,7 @@
                 <ul class="right hide-on-med-and-down">
                     {{if $options}}
                         {{foreach $options as $option}}
-                            <li><a href="{{base_url()}}{{$option['ml_option_url']}}">{{$option['ml_option_name']}} {{if $icons and $option['ml_option_icon']}}<i class="material-icons right">{{$option['ml_option_icon']}}</i>{{/if}}</a></li>
+                            <li><a href="{{base_url()}}{{$option['ml_option_url']}}">{{$option['ml_option_name']}} {{if $icons and $option['ml_option_icon']}}<i class="material-icons outline left">{{$option['ml_option_icon']}}</i>{{/if}}</a></li>
                         {{/foreach}}
                     {{/if}}
                 </ul>
