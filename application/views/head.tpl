@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/home.css">
     <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/login.css">
     <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/cart.css">
+    <link rel="stylesheet" type="text/css" href="{{base_url()}}application/views/pages/css/purchases.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{base_url()}}bootstrap/css/bootstrap.min.css">

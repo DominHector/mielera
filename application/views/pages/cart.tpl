@@ -6,5 +6,8 @@
 
     {{call name="com_cart"}}
 
+    <div id="contact" class="footer">
+        {{call name="com_footer"}}
+    </div>
 </body>
 </html>

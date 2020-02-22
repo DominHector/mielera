@@ -19,18 +19,19 @@ class Products_model extends CI_Model {
             'ml_purchase_product_id' => $product_id,
             'ml_purchase_product_name' => $product_name,
             'ml_purchase_product_price' => $product_price,
+            'ml_purchase_product_img' => $img,
+            'ml_purchase_product_description' => $description,
             'ml_purchase_quantity' => $quantity,
-            'ml_purchase_date' => date("Y/m/d H:i:s"),
-            'ml_purchase_sale' => $sale,
-            'ml_purchase_img' => $img,
-            'ml_purchase_description' => $description
+            'ml_purchase_date' => date("Y-m-d H:i:s"),
+            'ml_purchase_sale' => $sale
         );
+
         $query = $this->db->insert('ml_purchases', $data);
         return $query ?? false;
     }
 
     public function get_purchase_products_data($user) {
-        $sql = 'SELECT * FROM ml_purchases WHERE ml_purchase_user = ?';
+        $sql = 'SELECT * FROM ml_purchases WHERE ml_purchase_user = ? ORDER BY ml_purchase_date DESC';
         $query = $this->db->query($sql, [$user]);
         return $query->result_array() ?? false;
     }
