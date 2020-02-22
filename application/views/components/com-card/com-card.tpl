@@ -26,6 +26,8 @@
             </div>
         {{/foreach}}
     {{else}}
-        <p>{{$empty}}</p>
+        <div class="com-card">
+            <h6 class="empty-message col-xs-12">{{$empty}}</h6>
+        </div>
     {{/if}}
 {{/function}}

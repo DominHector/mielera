@@ -37,9 +37,11 @@ class Cart extends CI_Controller {
                     }
                 }
                 if($sale_record) {
-                    redirect('purchases');
+                    redirect('paypal');
                 }
             }
+        }else{
+            redirect('login');
         }
 
         $this->smarty->display('pages/cart.tpl');

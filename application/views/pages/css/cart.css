@@ -2547,6 +2547,10 @@ template {
 .com-card.highlight .card {
   box-shadow: -4px 0 0 0 #fbc02d;
 }
+.com-card .empty-message {
+  min-height: 560px;
+  padding: 16px;
+}
 
 .com-cart {
   padding-top: 30px;
