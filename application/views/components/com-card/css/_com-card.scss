@@ -1,11 +1,20 @@
 .com-card {
   .card {
+    .card-image {
+      max-width: 100% !important;
+      .card-img-top {
+        background-color: #fbfbfb;
+      }
+    }
     .card-body {
       .card-title {
         font-weight: 400;
       }
       .card-text {
         @include truncate(1em, 1.4, 3);
+      }
+      .card-info {
+        margin-bottom: 12px;
       }
       .card-count {
         display: flex;
@@ -51,8 +60,14 @@
     &.horizontal {
       @include media(md) {
         flex-direction: row !important;
-        img {
-          width: 20% !important;
+        .card-image {
+          width: 25% !important;
+          img {
+            width: 100% !important;
+          }
+        }
+        .card-body {
+          max-width: 75% !important;
         }
       }
       .card-text {

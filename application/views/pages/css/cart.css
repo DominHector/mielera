@@ -2429,10 +2429,11 @@ template {
   position: fixed;
 }
 .com-navbar .dropdown-content {
-  width: 160px !important;
+  width: 180px !important;
 }
 .com-navbar .dropdown-content .dropdown-trigger i {
   text-shadow: 0 0 40px black;
+  float: left !important;
 }
 
 .com-headboard {
@@ -2452,6 +2453,12 @@ template {
 .com-headboard .content img {
   width: 60%;
 }
+.com-card .card .card-image {
+  max-width: 100% !important;
+}
+.com-card .card .card-image .card-img-top {
+  background-color: #fbfbfb;
+}
 .com-card .card .card-body .card-title {
   font-weight: 400;
 }
@@ -2466,6 +2473,9 @@ template {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.com-card .card .card-body .card-info {
+  margin-bottom: 12px;
 }
 .com-card .card .card-body .card-count {
   display: flex;
@@ -2511,8 +2521,14 @@ template {
   .com-card .card.horizontal {
     flex-direction: row !important;
   }
-  .com-card .card.horizontal img {
-    width: 20% !important;
+  .com-card .card.horizontal .card-image {
+    width: 25% !important;
+  }
+  .com-card .card.horizontal .card-image img {
+    width: 100% !important;
+  }
+  .com-card .card.horizontal .card-body {
+    max-width: 75% !important;
   }
 }
 .com-card .card.horizontal .card-text {
