@@ -15,19 +15,15 @@ class Purchases extends CI_Controller {
             $this->load->model('Products_model');
             $purchases = $this->Products_model->get_purchase_products_data($this->session->userdata('user'));
 
-//            foreach ($purchases as $purchase) {
-//
-//                $data = array(
-//                    'ml_product_id' => $purchase['ml_purchase_product_id'],
-//                    'ml_product_img' => $purchase['ml_purchase_product_img'],
-//                    'ml_product_name' => $purchase['ml_purchase_product_name'],
-//                    'ml_product_description' => $purchase['ml_purchase_product_description'],
-//                    'ml_product_price' => $purchase['ml_purchase_product_price']
-//                );
-//
-//            }
+            foreach ($purchases as &$purchase) {
+                $purchase['ml_product_id'] = $purchase['ml_purchase_product_id'] ?? "";
+                $purchase['ml_product_img'] = $purchase['ml_purchase_product_img'] ?? "";
+                $purchase['ml_product_name'] = $purchase['ml_purchase_product_name'] ?? "";
+                $purchase['ml_product_description'] = $purchase['ml_purchase_product_description'] ?? "";
+                $purchase['ml_product_price'] = $purchase['ml_purchase_product_price'] ?? "";
+            }
 
-//            $this->smarty->assign('purchases', $data);
+            $this->smarty->assign('purchases', $purchases ?? "");
         }else{
             redirect(base_url());
         }

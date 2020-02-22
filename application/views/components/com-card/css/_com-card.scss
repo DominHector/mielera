@@ -36,6 +36,12 @@
           }
         }
       }
+      .text-price {
+        display: flex;
+        font-size: 1.3rem;
+        padding-right: 20px;
+        align-items: center;
+      }
       .btn-price {
         .material-icons {
           margin-left: 3px;
@@ -55,4 +61,7 @@
       }
     }
   }
+    &.highlight .card{
+      box-shadow: -4px 0 0 0 #fbc02d;
+    }
 }

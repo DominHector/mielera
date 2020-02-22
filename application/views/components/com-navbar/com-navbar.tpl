@@ -11,7 +11,7 @@
     <div class="com-navbar {{if $fading}}fading{{else}}not-fading{{/if}}">
         <nav class="yellow darken-2">
             <div class="nav-wrapper">
-                <a href="{{base_url()}}" class="brand-logo d-inline-flex left"> <img src="{{$brand_url}}"> mielera</a>
+                <a href="{{base_url()}}" class="brand-logo d-inline-flex left"> <img src="{{$brand_url}}"><b>mielera</b></a>
                 <ul class="right hide-on-med-and-down">
                     {{if $options}}
                         {{foreach $options as $option}}
