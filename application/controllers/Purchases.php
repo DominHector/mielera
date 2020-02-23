@@ -11,10 +11,12 @@ class Purchases extends CI_Controller {
 
         $this->smarty->assign('brand_url', base_url() . "assets/img/components/com-navbar/brand.svg");
 
-        if($this->session->userdata('user')){
-            $this->load->model('Products_model');
-            $purchases = $this->Products_model->get_purchase_products_data($this->session->userdata('user'));
+        $user = $this->session->userdata('user') ?? false;
 
+        $this->load->model('Products_model');
+        $purchases = $this->Products_model->get_purchase_products_data($user);
+
+        if($user){
             foreach ($purchases as &$purchase) {
                 $purchase['ml_product_id'] = $purchase['ml_purchase_product_id'] ?? "";
                 $purchase['ml_product_img'] = $purchase['ml_purchase_product_img'] ?? "";
@@ -24,6 +26,7 @@ class Purchases extends CI_Controller {
             }
 
             $this->smarty->assign('purchases', $purchases ?? "");
+
         }else{
             redirect(base_url());
         }

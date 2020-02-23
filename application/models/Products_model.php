@@ -39,10 +39,26 @@ class Products_model extends CI_Model {
 
     public function get_purchase_products_data_if_selling($user) {
         $sql = 'SELECT * FROM ml_purchases 
-                WHERE ml_purchase_user = ? AND ml_purchase_sale = "selling" 
+                WHERE ml_purchase_user = ? AND ml_purchase_sale = "selling"
                 ORDER BY ml_purchase_date DESC';
         $query = $this->db->query($sql, [$user]);
         return $query->result_array() ?? false;
+    }
+
+    public function get_purchase_products_data_if_sold($user) {
+        $sql = 'SELECT * FROM ml_purchases 
+                WHERE ml_purchase_user = ? AND ml_purchase_sale = "sold"
+                ORDER BY ml_purchase_date DESC';
+        $query = $this->db->query($sql, [$user]);
+        return $query->result_array() ?? false;
+    }
+
+    public function update_purchase_products_data_if_sold($user) {
+        $sql = 'UPDATE ml_purchases 
+                SET  ml_purchase_sale = "sold"
+                WHERE ml_purchase_user = ?';
+        $query = $this->db->query($sql, [$user]);
+        return $query ?? false;
     }
 
 }

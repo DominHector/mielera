@@ -7,8 +7,10 @@ class Paypal extends CI_Controller {
 	{
         $this->smarty->display('head.tpl');
 
+        $user = $this->session->userdata('user') ?? false;
+
         $this->load->model('Products_model');
-        $purchases_data = $this->Products_model->get_purchase_products_data_if_selling($this->session->userdata('user'));
+        $purchases_data = $this->Products_model->get_purchase_products_data_if_selling($user);
 
         $purchases_id = [];
         $purchases_name = [];
