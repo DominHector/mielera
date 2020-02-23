@@ -13,14 +13,15 @@ class Products_model extends CI_Model {
         return $query->result_array() ?? false;
     }
 
-    public function set_purchase_products_data($user, $product_id, $product_name, $product_price, $quantity, $sale, $img, $description) {
+    public function set_purchase_products_data($user, $purchase_data, $quantity, $sale) {
+
         $data = array(
             'ml_purchase_user' => $user,
-            'ml_purchase_product_id' => $product_id,
-            'ml_purchase_product_name' => $product_name,
-            'ml_purchase_product_price' => $product_price,
-            'ml_purchase_product_img' => $img,
-            'ml_purchase_product_description' => $description,
+            'ml_purchase_product_id' => $purchase_data['product_id'],
+            'ml_purchase_product_name' => $purchase_data['product_name'],
+            'ml_purchase_product_price' => $purchase_data['product_price'],
+            'ml_purchase_product_img' => $purchase_data['product_img'],
+            'ml_purchase_product_description' => $purchase_data['product_description'],
             'ml_purchase_quantity' => $quantity,
             'ml_purchase_date' => date("Y-m-d H:i:s"),
             'ml_purchase_sale' => $sale
